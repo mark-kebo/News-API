@@ -60,6 +60,10 @@ struct NewsView<ViewModel>: View where ViewModel: NewsViewModelProtocol {
             }
         }
         .onAppear() {
+            guard viewModel.viewDataItems.isEmpty else {
+                viewModel.updateFavoritesStatus()
+                return
+            }
             viewModel.refreshNews()
         }
     }

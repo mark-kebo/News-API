@@ -17,6 +17,7 @@ protocol NewsViewModelProtocol: ObservableObject {
     
     func refreshNews()
     func loadNextNewsPage()
+    func updateFavoritesStatus()
     func favoriteStatusChanged(index: Int)
 }
 
@@ -75,7 +76,12 @@ final class NewsViewModel: NewsViewModelProtocol {
             realmManager.create(entity)
         }
         viewDataItems[index].isFavorite = !currentFevoriteStatus
-        
+    }
+    
+    func updateFavoritesStatus() {
+        for index in 0..<viewDataItems.count {
+            viewDataItems[index].isFavorite = favoriteArticles.contains(where: { viewDataItems[index].title == $0.title })
+        }
     }
     
     private func getNews(isNeedRefresh: Bool = false) {
