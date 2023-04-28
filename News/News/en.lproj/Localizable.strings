@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  News
+
+  Created by Dmitry Vorozhbicki on 28/04/2023.
+  
+*/
+
+// MARK: - TabView
+
+"NewsTabTitle" = "News";
+"FavoriteNewsTabTitle" = "Favorites";
+"SourcesTabTitle" = "Sources";
+
+// MARK: - Errors
+
+"ErrorTitle" = "Error";
+"ErrorNetworkTitle" = "No internet connection";
+"ErrorNetworkMessage" = "Please check you connection and try again.";
+"GlobalUnexpectableErrorTitle" = "An unexpected error has occurred. Please try again later.";
+"ErrorObjectParcing" = "Object handling error.";
+"ErrorTimeout" = "Timeout. Please try again later.";
+
+// MARK: - News
+
+"NewsScreenTitle" = "Latest Tech News";
+"NewsScreenReloadButtonTitle" = "Try again";
+"NewsScreenPagingLoading" = "Loading...";
+"NewsScreenEmptyMessage" = "Empty data";
